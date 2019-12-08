@@ -41,7 +41,7 @@
           <div class="container-fluid" style="margin-block-start: inherit;text-align: -webkit-left;color: white;padding: 15px;">
                <img src="assets/img/ICON.jpg" alt="Quiz Test"> Quiz Test
           
-               <div class="nav navbar-nav navbar-right" style="margin-right: 45%;"><div class="btn btn-success  ">Quiz ends in <span id="time">02:00</span> minutes!</div></div>
+               <div class="nav navbar-nav navbar-right" style="margin-right: 45%;"><div class="btn btn-success  ">Time<span id="time">02:00</span> minutes!</div></div>
                <div class="nav navbar-nav navbar-right" style="margin-right: 10px;">
           <a href="log.jsp"><button class="btn btn-warning">HOME</button></a>
              </div></div>
