@@ -1,6 +1,8 @@
 # OES
 online examination portal
 
+using sqlite database
+
 
 note update port of tomcat server in eclipse for this to run:::
 tomcat admin port 8004
