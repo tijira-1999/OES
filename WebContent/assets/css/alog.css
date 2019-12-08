@@ -20,6 +20,9 @@ body{
 .alog{
 	width: 700px !important;
 }
+.faq{
+	width: 800px !important;
+}
 input[type=text], input[type=password] {
     
     padding: 12px 20px;

@@ -92,7 +92,6 @@ ResultSet resultSet = null;
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">DASHBOARD</a></li>
-                <li><a href="guidelines.jsp">FAQ</a></li>
                 <li><a href="log.jsp">LOGOUT</a></li>
                
               </ul>
