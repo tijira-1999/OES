@@ -63,7 +63,7 @@
 					</div>
 					<br>
 					
-					<p style="text-align:center;font-weight:bold;font-size:18px;"><a href="register.jsp" style="color:yellow;">Already Registered?Login here!</a></p>
+					<p style="text-align:center;font-weight:bold;font-size:18px;"><a href="register.jsp" style="color:yellow;">New Admin?Register here!</a></p>
 					
 					<div class="form-group">        
      					<div class="col-sm-offset-1 col-sm-5">
