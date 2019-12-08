@@ -3,12 +3,19 @@
 <head>
   <title>Quiz Time</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/startexam.css">
+	
+    <style>
+    .navbar{
+      background-color: #000;
+    }
+  </style>
     <script>
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
@@ -26,7 +33,7 @@
                 var url= "http://localhost:8082/OES/timeup.jsp"; 
                 window.location = url;
             }
-        }, 1000);
+        }, 7000);
     }
 
     window.onload = function () {
@@ -37,22 +44,32 @@
   </script>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container-fluid" style="margin-block-start: inherit;text-align: -webkit-left;color: white;padding: 15px;">
-               <img src="assets/img/ICON.jpg" alt="Quiz Test"> Quiz Test
-          
-               <div class="nav navbar-nav navbar-right" style="margin-right: 45%;"><div class="btn btn-success  ">Time<span id="time">02:00</span> minutes!</div></div>
-               <div class="nav navbar-nav navbar-right" style="margin-right: 10px;">
-          <a href="log.jsp"><button class="btn btn-warning">HOME</button></a>
-             </div></div>
-    </nav>
+	
+	<!-- navbar -->
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+              </button>
+              <a class="navbar-brand" href="#"><img src="assets/img/ICON.jpg" class="img-rounded" alt="Quiz Test">OES</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+              	
+                <li><a href="log.jsp">LOGOUT</a></li>
+                <li class="active"><a href="#" id="time">01:00</li>
+               
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2 col-sm-12 col-xs-12">
-      </div>
-      <div class="col-md-8 col-sm-12 col-xs-12">
-        <div class="container-fluid">
+  <div class="start container-fluid">
+    
       
      <%@ page import="java.io.*" %>
      <%@ page import="java.sql.*" %>
@@ -110,73 +127,53 @@
       //response.sendRedirect("final_submit.jsp");
     }
       %>
-       <form class="form-horizontal" action="start_exam.jsp" method="post" name="theForm">
+       <form class="form-horizontal" action="start_exam.jsp" method="post" name="theForm">         
+          <h3 style="color: yellow;"><%=ques%></h3>
+          <hr>
+          
+          <div class="form-group">
+            <label style="color: white; class="control-label" >A: <%=ans1%></label>
+          </div>
+
+          <div class="form-group">
+            <label style="color: white; class="control-label" >B: <%=ans2%></label>
+          </div>
+
+          <div class="form-group">
+            <label style="color: white; class="control-label" >C: <%=ans3%></label>
+          </div>
+
+          <div class="form-group">
+            <label style="color: white; class="control-label" >D: <%=ans4%></label>
+          </div>
+
 
         <div class="form-group">
-            <label class="control-label" >Question : <%=ques%></label>
-          </div>
-          <div class="form-group">
-            <label class="control-label" >Option A: <%=ans1%></label>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label" >Option B: <%=ans2%></label>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label" >Option C: <%=ans3%></label>
-          </div>
-
-          <div class="form-group">
-            <label class="control-label" >Option D: <%=ans4%></label>
-          </div>
-
-<!-- 
-        <div class="input-group-text ">
-          Question : <%=ques%>
+              <label class="control-label col-sm-6" style="color: lightblue;">Answer:</label>
+              	<div class="dropdown col-sm-6">
+             		<select name="ans" class="btn btn-info btoon">
+            			<option value='1'> A </option>
+            			<option value='2'> B </option>
+            			<option value='3'> C </option>
+            			<option value='4'> D </option>
+          			</select>
+        		</div>
         </div>
-        <div class="input-group-text">
-          Option A: <%=ans1%>
-        </div>
-        <div class="input-group-text">
-          Option B: <%=ans2%>
-        </div>
-        <div class="input-group-text">
-          Option C: <%=ans3%>
-        </div>
-        <div class="input-group-text">
-          Option D: <%=ans4%>
-        </div>
- -->
-        <div class="form-group custom-form">
-              <label class="control-label">Answer:
-              	<div class="dropdown">
-             <select name="ans" class="btn btn-info btn-block">
-            <option value='1'> A </option>
-            <option value='2'> B </option>
-            <option value='3'> C </option>
-            <option value='4'> D </option>
-          </select>
-        </div></label></div>
 
-        <!-- <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Answer</label>
-          </div>
-          <select class="custom-select" id="ans" name="ans">
-            <option selected>Choose...</option>
-            <option value='1'> A </option>
-            <option value='2'> B </option>
-            <option value='3'> C </option>
-            <option value='4'> D </option>
-          </select>
-        </div> -->
-        <br>
-
-    <button type="submit" class="btn btn-primary" formaction="http://localhost:8082/OES/next.jsp">Next Question </button>
-    <button type="button" class="btn btn-success" onclick="window.open('http://localhost:8082/OES/submit.jsp','_self')"> Final Submit </button>
-
-  </form></div></div></div></div>
+        <hr>
+        <div class="form-group">        
+     		<div class="col-sm-offset-1 col-sm-3">
+        		<input type="submit" value="Next Question" class="btn btn-primary " formaction="http://localhost:8082/OES/next.jsp">
+        	</div>
+        	<div class=" col-sm-4"></div>
+        	<div class=" col-sm-2">
+        		<input type="button" value="Final Submit" class="btn btn-success bton" onclick="window.open('http://localhost:8082/OES/submit.jsp','_self')">
+     		</div>
+     	</div> 
+     	
+  		</form>
+  	
+ </div>
 
    </body>
 </html>
