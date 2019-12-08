@@ -1,0 +1,69 @@
+body{
+  padding: 0;
+  margin: 0;
+  background: url(../img/log1.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.form-horizontal{
+	background-color: rgba(1,1,1,0.7);
+	border: none;
+	border-radius: 30px;
+	padding: 15px 50px;
+	margin: 150px 50px;
+	/*-webkit-box-shadow: -4px 3px 77px 5px rgba(255,255,255,1);*/
+	/*-moz-box-shadow: -4px 3px 77px 5px rgba(255,255,255,1);*/
+	/*box-shadow: -4px 3px 77px 5px rgba(255,255,255,1);*/
+}
+.log{
+	width: 700px !important;
+}
+input[type=text], input[type=password] {
+    
+    padding: 12px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border: 3px solid #a4e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  input[type=text]:focus , input[type=password]:focus {
+    border: 3px solid greenyellow;
+    width: 300px;
+    border-radius: 25px;
+    text-align: left;
+    transition-duration: 1s;
+  }
+  .bton{
+  	width:50px;
+  }
+  
+  .btn{
+    width: 40px;
+    border-radius: 10px !important;
+    
+  }
+
+  .btn:hover{
+    width: 40px;
+    border-radius: 25px !important;
+    background-color: #f4511e !important;
+    transition: 0.3s;
+    text-transform: uppercase !important;
+    color: white !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    
+  }
+
+  

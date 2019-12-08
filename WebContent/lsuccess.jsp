@@ -35,6 +35,7 @@ ResultSet resultSet = null;
 		if(resultSet.next()){
 		if(password.equals(resultSet.getString("password"))){
 		session.setAttribute("branch",resultSet.getString("branch"));
+		session.setAttribute("redgno",resultSet.getString("redgno"));
 		session.setAttribute("name",resultSet.getString("name"));
 		session.setAttribute("sic",resultSet.getString("sic"));
 		session.setAttribute("sems",resultSet.getString("sems"));

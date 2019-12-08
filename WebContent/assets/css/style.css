@@ -17,6 +17,7 @@ h1{
 	border: 1px solid #80ffff;
 	padding: 10px 30px;
 	margin: 50px 50px;
+	background-color: rgba(1,1,1,0.7);
 	/*-webkit-box-shadow: -4px 3px 77px 5px rgba(255,255,255,1);*/
 	/*-moz-box-shadow: -4px 3px 77px 5px rgba(255,255,255,1);*/
 	/*box-shadow: -4px 3px 77px 5px rgba(255,255,255,1);*/
@@ -29,9 +30,6 @@ label{
 }
 .container-fluid{
 	margin-top:50px;
-}
-.form-horizontal{
-	background-color: rgba(1,1,1,0.7);
 }
 .nav{
 	background-color: black;

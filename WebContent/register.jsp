@@ -75,6 +75,6 @@
   				<div class="form-group custom-form">
 					<input type="reset" value="RESET" class="btn btn-danger btn-block">
 				</div>
-				<a href="log.jsp">Alredy registered?Login</a>
+				<a href="log.jsp">Already registered?Login</a>
 				</form></div></div></div>
 </body>
